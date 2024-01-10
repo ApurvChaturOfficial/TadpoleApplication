@@ -8,14 +8,24 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      manifest:  {
-        "name": "Tadpole Organisation",
-        "icons": [
+      manifest: {
+        "registerType": 'autoUpdate',
+        "name":"Tadpole Organisation",
+        "short_name":"Tadpole",
+        "display": "standalone",
+        "background_color": "#3D0C11",
+        "theme_color": "#3D0C11",
+        "icons":[
           {
             src: "Business/Tadpole/favicon_io/android-chrome-512x512.png",
             sizes: "512x512",
             type: "image/png",
-          }
+          },
+          {
+            src: "Business/Tadpole/favicon_io/android-chrome-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
         ],
       } 
     })
